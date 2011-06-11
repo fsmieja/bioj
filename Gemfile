@@ -24,7 +24,7 @@ gem 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 group :test do
-  gem 'rspec', '2.0.1'
+  gem 'rspec-rails', '>= 2.4'
 end
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
