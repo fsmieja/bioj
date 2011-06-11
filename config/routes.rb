@@ -1,5 +1,13 @@
 Biojotter::Application.routes.draw do
 
+  get "sites/home"
+
+  get "sites/contact"
+
+  get "pages/home"
+
+  get "pages/contact"
+
   resources :events
 
   # The priority is based upon order of creation:
