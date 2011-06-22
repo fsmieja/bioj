@@ -1,9 +1,12 @@
 class EventsController < ApplicationController
+
+
   # GET /events
   # GET /events.xml
   def index
     @events = Event.all
-
+    @title = "Biojotter - List events"
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @events }
@@ -14,6 +17,7 @@ class EventsController < ApplicationController
   # GET /events/1.xml
   def show
     @event = Event.find(params[:id])
+    @title = "Biojotter - Event"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +29,7 @@ class EventsController < ApplicationController
   # GET /events/new.xml
   def new
     @event = Event.new
+    @title = "Biojotter - Define event"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +40,8 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     @event = Event.find(params[:id])
+    @title = "Biojotter - Edit event"
+
     tags = @event.tags
     @taglist = '' 
     tags.each do |t|

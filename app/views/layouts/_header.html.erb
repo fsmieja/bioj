@@ -1,0 +1,12 @@
+<header>
+  <% logo = image_tag("stlogo2.jpg", :alt => "SmartaTech - Biojotter", :class => "round", :size => "200x65") %>
+  <%=  link_to logo, root_path %>
+  <nav class="round">
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Events", events_path %></li>
+      <li><%= link_to 'Help', help_path %></li>
+      <li><%= link_to "Sign in", '#' %></li>
+    </ul>
+  </nav>
+</header>
